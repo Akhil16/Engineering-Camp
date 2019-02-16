@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drag Drop</title>
+    <link rel="stylesheet" href="../css/drag.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+</head>
+
+<body>
+    <!-- <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Drag & Drop</h1>
+            <p class="lead">Add new elements on board </p>
+            <hr class="my-4">
+            <form action="" name="task-data">
+                <div class="row">
+                    <div class="col-7">
+                        <input type="text" class="form-control form-control-lg" placeholder="New element name ..."
+                            id="task-name" name="task-name">
+                    </div>
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="board" value="board1" checked>
+                            <label class="form-check-label" for="board1">
+                                Board1
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="board" value="board2">
+                            <label class="form-check-label" for="board2">
+                                Board2
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="board" value="board3">
+                            <label class="form-check-label" for="board3">
+                                Board3
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <a class="btn btn-primary btn-lg" href="#" role="button" onclick="addToList()">Add To board</a>
+                    </div>
+                </div>
+            </form>
+        </div><br><br>
+    </div> -->
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-4 board">
+                <ul class="list-group list-group-flush" >
+                    <li class="list-group-item"> Learn</li>
+                    <div class="padding25 h-700 bg-warning" draggable="true" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <li id="li1" draggable="true" ondragstart="drag(event)" class="list-group-item">Aniket </li>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-4 board">
+                <ul class="list-group list-group-flush" >
+                    <li class="list-group-item"> Manage</li>
+                    <div class="padding25 h-700 bg-info" draggable="true" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <li id="li2" draggable="true" ondragstart="drag(event)" class="list-group-item"> Akhil</li>
+                    </div>
+                </ul>
+            </div>
+            <div class="col-4 board">
+                <ul class="list-group list-group-flush" >
+                    <li class="list-group-item"> Thrive</li>
+                    <div class="padding25 h-700 bg-success" draggable="true" ondrop="drop(event)" ondragover="allowDrop(event)">
+                        <li id="li3" draggable="true" ondragstart="drag(event)" class="list-group-item">Mayank </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text/html", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text/html");
+    ev.target.appendChild(document.getElementById(data));
+}
+</script>
+</html>

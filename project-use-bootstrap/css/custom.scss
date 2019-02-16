@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Oxygen|Roboto+Mono:400i');
+@import "../../lib/node_modules/bootstrap/scss/bootstrap";
+$enable-gradients:true;
+body,html{
+    margin: 0px;
+    padding: 0px;
+}
+.container-fluid{
+    padding: 0px;
+    margin: 0px;
+}
+
+.bg-gr_red-yel{
+    background: linear-gradient(to top right,#ff8a00,#da1b60);
+}
+.nav-link{
+    color: #ccc;
+}
+.navbar-brand {
+    color: #cecece;
+}
+.head{
+    font-family: 'Oxygen', sans-serif;
+    background: linear-gradient(to top left,#da1b60,#ff8a00);
+    font-size: 40px;
+    color: aliceblue;
+    text-align: center;
+    padding: 20px;
+}

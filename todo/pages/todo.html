@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>To Do List </title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="jumbotron">
+            <h1 class="display-4">Akhil's To Do App</h1>
+            <p class="lead">Add your daily Tasks to your list.</p>
+            <hr class="my-4">
+            <form action="" name="task-data">
+                <div class="row">
+                    <div class="col-7">
+                        <input type="text" class="form-control form-control-lg" placeholder="Things you need to do..." id="task-name" name="task-name">
+                    </div>
+                    <div class="col">
+                        <a class="btn btn-primary btn-lg" href="#" role="button" onclick="addToList()" >Add To List</a>
+                    </div>
+                </div>
+            </form>
+        </div><br><br>
+        <ul class="list-group" id="task-list">
+            <li class="list-group-item list-group-item-action bg-danger text-white">
+                <div class="w-100 text-center">
+                <h5 class="mb-1">Task List</h5>
+                
+                </div>
+            </li>
+            <!-- <li class="list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1" >Task Name</h5>
+                    <div>
+                        <i class="fas fa-edit" onclick="edit()"></i> &nbsp
+                        <i class="fas fa-trash" onclick="deleteData()"></i>
+                    </div>
+                </div>
+            </li>            -->
+        </ul>
+    </div>
+</body>
+<script src="../js/todo.js"></script>
+</html>

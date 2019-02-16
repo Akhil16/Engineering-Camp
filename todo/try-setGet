@@ -1,0 +1,13 @@
+class Person{
+    private int personId;
+
+
+
+    public void setdId(int inputId){
+        this.personId=inputId;
+
+    }
+    public int getID(){
+        return personId;
+    }
+}

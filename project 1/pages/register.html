@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Registeration Fee| Engineering Camp</title>
+</head>
+<body>
+   <link rel="stylesheet" href="../css/style.css">
+    <div class="head">
+        Welcome to Fitness
+    </div>
+    <div class="marquee">
+        <marquee direction="right"> Registration Starts from 5th-Feb-2019 </marquee>
+    </div>
+    <div class="navbar">
+        <ul>
+            <li class="nav"><a href="index.html">Home</a></li>
+            <li class="nav"><a href="contact.html">Contact</a></li>
+            <li class="nav"><a href="about.html">About</a></li>
+            <li class="nav"><a href="#Gallery">Gallery</a></li>
+            <li class="nav"><a href="register.html">Admission/Register</a></li>
+        </ul>
+    </div>
+    <div class="section">
+        <div class="left width50 " >
+            <form action="" onsubmit="" name="bill" class="padding25" >
+            <h2>Excercise</h2>
+                <hr>
+               Cardio:<br>
+               <input type="number" name="Cardio" ><br>
+               Zumba:<br>
+               <input type="number" name="Zumba" ><br>
+               Lifting :    <br>
+               <input type="number" name="Lifting"><br>
+               <h2>Package :</h2><hr>
+               <input type="radio" name="package" id="1" value="2"> Platinum
+               <input type="radio" name="package" id="2" value="5"> Gold
+               <input type="radio" name="package" id="3" value="10"> Silver
+               <br><br>
+               <input type="button" value="Calculate Fees" onclick ="formData()">
+           </form>
+        </div>
+        <div class="right width50">  
+            <h2>Your Total is :</h2>
+            <h1 id="total">0 </h1>
+            <h2>Your Fees is :</h2>
+            <h1 id="fees"> 0</h1>
+        </div>
+    </div>
+
+
+
+
+    <footer class="footer">
+        
+        <div class="col33">
+           
+            Contact : +91 998 899 8899
+            
+
+        </div>
+        <div class="col33">
+            Email: akhil12@gmail.com
+        </div>
+        <div class="col33">
+            Follow us On <a href=""> <img src="http://www.transparentpng.com/thumb/facebook-logo-png/background-facebook-logo-5.png" 
+                width="30px" style="vertical-align: text-bottom;"  alt="Facebook"></a>            
+        </div>
+    </footer>
+<script>
+function formData() {
+  var cardioFee = parseInt( document.forms["bill"]["Cardio"].value);
+  var ZumbaFee = parseInt( document.forms["bill"]["Zumba"].value);
+  var LiftFee = parseInt( document.forms["bill"]["Lifting"].value);
+  var package = parseInt( document.forms["bill"]["package"].value);
+  var totalSum = parseInt((cardioFee + ZumbaFee + LiftFee ));
+  var fees =  totalSum -totalSum/package;
+  console.log(package);
+  document.getElementById("total").innerHTML = totalSum;
+  document.getElementById("fees").innerHTML = fees;
+}
+</script>
+</body>
+</html>
